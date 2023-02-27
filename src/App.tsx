@@ -12,7 +12,7 @@ function App() {
   return (
     <div style={{ display: "flex" }}>
       <div>
-        <h1>TEST</h1>
+        <h1>Exercise Bank</h1>
         {exerciseBank.map((exercise) => {
           return (
             <div>
@@ -38,7 +38,7 @@ function App() {
         })}
       </div>
       <div>
-        <h1>TEST</h1>
+        <h1>Workout Program</h1>
         {workoutPrograms.map((workoutProgram) => {
           return (
             <div>
