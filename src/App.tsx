@@ -4,6 +4,7 @@ import { exerciseData } from "./exerciseData";
 import "./App.css";
 import StartPage from "./pages/StartPage";
 import WpPage from "./pages/WpPage";
+import AddWpPage from "./pages/AddWpPage";
 
 function App() {
   const [exerciseBank, setExerciseBank] =
@@ -103,10 +104,7 @@ function App() {
         path="/workoutprogram/:id"
         element={<WpPage getWP={getWP} getExerciseData={getExerciseData} />}
       />
-      <Route
-        path="/AddWP"
-        element={<div style={{ color: "red" }}>TODO ADDWP PAGE</div>}
-      />
+      <Route path="/AddWP" element={<AddWpPage />} />
     </Routes>
   );
 }

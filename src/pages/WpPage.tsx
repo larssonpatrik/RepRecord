@@ -38,7 +38,7 @@ export default function WpPage({ getWP, getExerciseData }: WpPageProps) {
         <BiWrench color="white" size={28} />
       </div>
       <Spacer size={4} />
-      {WP.exercises.map((exercise) => {
+      {WP.exercises.map((exercise, i) => {
         const exerciseData = getExerciseData(exercise.exerciseID);
         return (
           <>
@@ -47,6 +47,7 @@ export default function WpPage({ getWP, getExerciseData }: WpPageProps) {
               reps={exercise.reps}
               sets={exercise.sets}
               weight={exercise.weight}
+              order={i + 1}
             />
             <Spacer size={2} />
           </>

@@ -22,7 +22,11 @@ export default function StartPage({ WPsProp }: StartPageProps) {
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
       <Spacer size={3} />
-      <img src={require("../Assets/RepRecord.png")} style={{ width: 200 }} />
+      <img
+        src={require("../Assets/RepRecord.png")}
+        style={{ width: 200 }}
+        alt="logo"
+      />
       <Wrapper>
         <Spacer size={3} />
         <CardSlider WPArray={WPsProp} label="My Workouts" />

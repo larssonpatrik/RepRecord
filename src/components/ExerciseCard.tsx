@@ -8,6 +8,7 @@ type ExerciseCardProps = {
   reps: number;
   sets: number;
   weight: number;
+  order: number;
 };
 
 export default function ExerciseCard({
@@ -15,11 +16,12 @@ export default function ExerciseCard({
   reps,
   sets,
   weight,
+  order,
 }: ExerciseCardProps) {
   return (
     <ScCardContainer>
       <ScHeader>
-        <ScNumber>1</ScNumber>
+        <ScNumber>{order}</ScNumber>
         <Spacer size={2} />
         <H1>{exerciseName}</H1>
       </ScHeader>
