@@ -10,5 +10,5 @@ export default function Wrapper({ children }: React.PropsWithChildren) {
 const ScDiv = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 0 0 24px;
+  width: 100vw;
 `;

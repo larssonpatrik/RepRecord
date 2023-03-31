@@ -24,34 +24,32 @@ export default function CardSlider({ WPArray, label }: CardSliderProps) {
   const navigate = useNavigate();
 
   return (
-    <>
+    <div>
       <div
         style={{
           display: "flex",
           justifyContent: "space-between",
-          marginRight: 24,
+          padding: "0 24px",
         }}
       >
         <H1>{label}</H1>
         <AddButton navigation="/addWP">Add WP</AddButton>
       </div>
       <Spacer size={1} />
-      <ScContainer>
-        <ScSliderContainer>
-          {WPArray.map((WP) => {
-            return (
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <WpCard
-                  label={WP.name}
-                  action={() => navigate("/workoutprogram/" + WP.wpID)}
-                />
-                <Spacer size={1} />
-              </div>
-            );
-          })}
-        </ScSliderContainer>
-      </ScContainer>
-    </>
+      <ScSliderContainer>
+        {WPArray.map((WP) => {
+          return (
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <WpCard
+                label={WP.name}
+                action={() => navigate("/workoutprogram/" + WP.wpID)}
+              />
+              <Spacer size={1} />
+            </div>
+          );
+        })}
+      </ScSliderContainer>
+    </div>
   );
 }
 
@@ -64,4 +62,8 @@ const ScContainer = styled.div`
 
 const ScSliderContainer = styled.div`
   display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 0 0 8px;
 `;

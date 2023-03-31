@@ -57,6 +57,24 @@ function App() {
         },
       ],
     },
+    {
+      wpID: 3,
+      name: "Chest & Triceps",
+      exercises: [
+        {
+          exerciseID: exerciseData[1].exerciseID,
+          sets: 2,
+          weight: 20,
+          reps: 10,
+        },
+        {
+          exerciseID: exerciseData[2].exerciseID,
+          sets: 3,
+          weight: 10,
+          reps: 8,
+        },
+      ],
+    },
   ]);
 
   function addWP(newWP: {
@@ -104,7 +122,7 @@ function App() {
         path="/workoutprogram/:id"
         element={<WpPage getWP={getWP} getExerciseData={getExerciseData} />}
       />
-      <Route path="/AddWP" element={<AddWpPage />} />
+      <Route path="/AddWP" element={<AddWpPage ExBank={exerciseBank} />} />
     </Routes>
   );
 }
